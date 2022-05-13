@@ -1,0 +1,7 @@
+<app-add-people (onAddPerson)="addPerson($event)"></app-add-people>
+    <app-people-item 
+    *ngFor="let person of people"
+     [person]="person"
+     (onDeletePerson)="deletePerson(person)"
+     (onToggleReminder)="toggleReminder(person)">
+    </app-people-item>
